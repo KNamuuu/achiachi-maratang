@@ -27,8 +27,29 @@ export default function StoreSection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Region list */}
+        {/* Mobile: region chips */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="md:hidden flex flex-wrap justify-center gap-3"
+        >
+          {regions.map((region) => (
+            <span
+              key={region}
+              className="inline-flex items-center gap-1.5 bg-gray-100 rounded-full px-4 py-2 font-body text-sm text-dark"
+            >
+              <MapPin size={14} className="text-primary" />
+              {region}
+              <span className="text-dark/40">
+                {stores.filter((s) => s.region === region).length}
+              </span>
+            </span>
+          ))}
+        </motion.div>
+
+        {/* Desktop: full region list + map */}
+        <div className="hidden md:grid md:grid-cols-2 gap-8">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -53,12 +74,11 @@ export default function StoreSection() {
             ))}
           </motion.div>
 
-          {/* Map placeholder */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-gray-100 rounded-2xl h-80 md:h-full min-h-[300px] flex items-center justify-center"
+            className="flex bg-gray-100 rounded-2xl h-80 md:h-full min-h-[300px] items-center justify-center"
           >
             <div className="text-center text-gray-400">
               <MapPin size={48} className="mx-auto mb-2" />

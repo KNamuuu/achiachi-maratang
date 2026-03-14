@@ -21,7 +21,7 @@ export default function BrandSection() {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 md:mb-16"
         >
           <h2 className="font-heading text-5xl md:text-7xl text-dark tracking-wider">
             OUR BRAND
@@ -45,7 +45,7 @@ export default function BrandSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 grid md:grid-cols-3 gap-6"
+          className="mt-16 hidden md:grid md:grid-cols-3 gap-6"
         >
           {[
             { title: '정통 레시피', desc: '본토 사천에서 직접 공수한 향신료로 깊은 풍미를 구현합니다.' },

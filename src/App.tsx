@@ -1,6 +1,7 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import Header from './components/layout/Header';
+import ScrollToTop from './components/layout/ScrollToTop';
 import Footer from './components/layout/Footer';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
@@ -14,6 +15,7 @@ export default function App() {
   return (
     <div className="font-body">
       <Header />
+      <ScrollToTop />
       <main>
         <AnimatePresence mode="wait">
           <motion.div
