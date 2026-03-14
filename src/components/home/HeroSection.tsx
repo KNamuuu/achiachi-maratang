@@ -27,7 +27,7 @@ export default function HeroSection({ onScrollDown }: HeroSectionProps) {
           transition={{ duration: 0.8 }}
           className="font-heading text-6xl md:text-8xl lg:text-9xl text-white tracking-wider"
         >
-          ARCHI ARCHI
+          ACHI ACHI
         </motion.h1>
         <motion.h2
           initial={{ opacity: 0, y: 40 }}

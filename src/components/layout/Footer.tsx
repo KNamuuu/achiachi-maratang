@@ -8,7 +8,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <h3 className="font-heading text-2xl text-white mb-4">
-              ARCHI ARCHI MARATANG
+              ACHI ACHI MARATANG
             </h3>
             <p className="font-body text-sm leading-relaxed">
               정통 마라의 깊은 맛을 전하는
@@ -44,7 +44,7 @@ export default function Footer() {
             <h4 className="font-body font-bold text-white mb-4">고객센터</h4>
             <ul className="space-y-2 font-body text-sm">
               <li>전화: 1588-0000</li>
-              <li>이메일: info@archimaratang.com</li>
+              <li>이메일: info@achiachi-maratang.com</li>
               <li>운영시간: 평일 09:00 - 18:00</li>
             </ul>
           </div>
